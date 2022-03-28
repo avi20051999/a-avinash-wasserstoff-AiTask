@@ -25,9 +25,11 @@ for(int orderId=0;orderId<numberOfOrders;++orderId)
    {
        cin>>productName;
        cin>>productCount;
-       productFrequency[productName]+=productCount;
-       if(orderedAgo.days<=30 && orderedAgo.month==0)
+       
+       if(orderedAgo.days<=30 && orderedAgo.month==0 && orderedAgo.year==0)
        {
+           productFrequency[productName]+=productCount;
+
            if(maximumOrderedProduct == "")
            {
                maximumOrderedProduct = productName;
